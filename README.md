@@ -1,0 +1,2 @@
+# NijiEmu
+A Spectrum emulator
