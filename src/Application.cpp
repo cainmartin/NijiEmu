@@ -15,7 +15,12 @@ bool Application::Initialize()
     }
     catch (const std::exception &ex)
     {
+        // TODO: Provide a platform independent way to print error messages / message boxes
+#ifdef _WIN32
         MessageBoxA(nullptr, ex.what(), "Unhandled exception", MB_ICONERROR | MB_OK);
+#elif __APPLE__
+        // Apple equivalent
+#endif
         return false;
     }
 

@@ -2,6 +2,8 @@
 // Created by cmartin on 2024/11/25.
 //
 
+#ifdef _WIN32
+
 #include "Platform_Win32.h"
 #include <windows.h>
 #include <stdexcept>
@@ -123,3 +125,5 @@ LRESULT Platform_Win32::WndProc(HWND hwnd, UINT message, WPARAM wparam, LPARAM l
 
     return 0;
 }
+
+#endif // _WIN32

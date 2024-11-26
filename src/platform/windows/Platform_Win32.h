@@ -5,6 +5,8 @@
 #ifndef NIJIEMU_PLATFORM_WIN32_H
 #define NIJIEMU_PLATFORM_WIN32_H
 
+#ifdef _WIN32
+
 #include "IPlatform.h"
 #include <windows.h>
 
@@ -26,5 +28,6 @@ private:
     LRESULT WndProc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam);
 };
 
+#endif // _WIN32
 
 #endif //NIJIEMU_PLATFORM_WIN32_H
