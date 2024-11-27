@@ -5,8 +5,8 @@
 #ifndef NIJIEMU_PLATFORM_WIN32_H
 #define NIJIEMU_PLATFORM_WIN32_H
 
-#include "../interfaces/IPlatform.h"
 #include <windows.h>
+#include "../interfaces/IPlatform.h"
 
 class Platform_Win32 : public IPlatform
 {
@@ -17,6 +17,8 @@ public:
     void Initialize() override;
     void PollEvents() override;
     [[nodiscard]] bool ShouldClose() const override;
+
+    void* GetNativeLayer() override;
 
 private:
     HWND m_hwnd;

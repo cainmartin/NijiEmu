@@ -13,8 +13,8 @@ public:
     OpenGLRenderer();
     ~OpenGLRenderer() override;
 
+    void Init() override;
     void Draw() override;
-
 private:
 
 };

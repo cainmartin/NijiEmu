@@ -13,6 +13,7 @@ public:
     MetalRenderer();
     ~MetalRenderer() override;
 
+    void Init() override;
     void Draw() override;
 
 private:

@@ -9,7 +9,7 @@ class IRenderer
 {
 public:
     virtual ~IRenderer() = default;
-
+    virtual void Init() = 0;
     virtual void Draw() = 0;
 };
 #endif //NIJIEMU_IRENDERER_H

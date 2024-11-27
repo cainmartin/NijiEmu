@@ -1,7 +1,17 @@
 #ifdef __APPLE__
 
-#import <Cocoa/Cocoa.h>
-#include "Platform_MacOSX.h"
+#import "Platform_MacOSX.h"
+#import <Foundation/Foundation.h>
+#import <QuartzCore/CAMetalLayer.h>
+
+@interface MetalView : NSView
+@end
+
+@implementation MetalView
++ (Class)layerClass {
+    return [CAMetalLayer class];
+}
+@end
 
 Platform_MacOSX::Platform_MacOSX()
         : m_shouldClose(false), m_application(nullptr), m_window(nullptr)
@@ -117,6 +127,11 @@ void Platform_MacOSX::PollEvents()
 bool Platform_MacOSX::ShouldClose() const
 {
     return m_shouldClose;
+}
+
+void*  Platform_MacOSX::GetNativeLayer()
+{
+    return nullptr;
 }
 
 #endif // __APPLE__

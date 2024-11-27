@@ -14,6 +14,11 @@ OpenGLRenderer::~OpenGLRenderer()
 
 }
 
+void OpenGLRenderer::Init()
+{
+
+}
+
 void OpenGLRenderer::Draw()
 {
 

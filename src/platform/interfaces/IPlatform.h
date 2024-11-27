@@ -12,6 +12,8 @@ public:
     virtual void Initialize() = 0;
     virtual void PollEvents() = 0;
     [[nodiscard]] virtual bool ShouldClose() const = 0;
+
+    virtual void* GetNativeLayer() = 0;
 };
 
 #endif //NIJIEMU_IPLATFORM_H

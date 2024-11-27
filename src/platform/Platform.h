@@ -5,6 +5,10 @@
 #ifndef NIJIEMU_PLATFORM_H
 #define NIJIEMU_PLATFORM_H
 
-// Add the platform specific files in here and then include on this file.
+#ifdef _WIN32
+#include "windows/Platform_Win32.h"
+#elif __APPLE__
+#include "mac/Platform_MacOSX.h"
+#endif
 
 #endif //NIJIEMU_PLATFORM_H
