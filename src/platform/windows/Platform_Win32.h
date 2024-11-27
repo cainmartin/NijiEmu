@@ -5,9 +5,7 @@
 #ifndef NIJIEMU_PLATFORM_WIN32_H
 #define NIJIEMU_PLATFORM_WIN32_H
 
-#ifdef _WIN32
-
-#include "IPlatform.h"
+#include "../IPlatform.h"
 #include <windows.h>
 
 class Platform_Win32 : public IPlatform
@@ -27,7 +25,5 @@ private:
     static LRESULT CALLBACK StaticWndProc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam);
     LRESULT WndProc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam);
 };
-
-#endif // _WIN32
 
 #endif //NIJIEMU_PLATFORM_WIN32_H
