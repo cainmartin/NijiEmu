@@ -32,13 +32,14 @@ add_executable(NijiEmu main.cpp
         src/Application.h
         src/renderer/Renderer.cpp
         src/renderer/Renderer.h
-        src/platform/IPlatform.h
+        src/platform/interfaces/IPlatform.h
         src/platform/PlatformFactory.h
         # For now - OpenGL will be both Mac and Windows until the metal renderer is working
         src/renderer/gl/OpenGLRenderer.cpp
         src/renderer/gl/OpenGLRenderer.h
         src/renderer/RendererFactory.h
-        src/renderer/IRenderer.h
+        src/renderer/interfaces/IRenderer.h
+        src/platform/Platform.h
         ${SOURCES}
 )
 

@@ -5,7 +5,7 @@
 #ifndef NIJIEMU_PLATFORM_WIN32_H
 #define NIJIEMU_PLATFORM_WIN32_H
 
-#include "../IPlatform.h"
+#include "../interfaces/IPlatform.h"
 #include <windows.h>
 
 class Platform_Win32 : public IPlatform

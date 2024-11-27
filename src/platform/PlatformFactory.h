@@ -5,7 +5,7 @@
 #ifndef NIJIEMU_PLATFORMFACTORY_H
 #define NIJIEMU_PLATFORMFACTORY_H
 
-#include "IPlatform.h"
+#include "interfaces/IPlatform.h"
 #include "windows/Platform_Win32.h"
 #include "mac/Platform_MacOSX.h"
 #include <memory>

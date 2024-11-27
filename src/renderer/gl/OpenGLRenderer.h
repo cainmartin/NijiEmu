@@ -5,7 +5,7 @@
 #ifndef NIJIEMU_OPENGLRENDERER_H
 #define NIJIEMU_OPENGLRENDERER_H
 
-#include "../IRenderer.h"
+#include "../interfaces/IRenderer.h"
 
 class OpenGLRenderer : public IRenderer
 {

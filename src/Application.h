@@ -6,7 +6,7 @@
 #define NIJIEMU_APPLICATION_H
 
 #include <memory>
-#include "platform/IPlatform.h"
+#include "platform/interfaces/IPlatform.h"
 
 class Application
 {

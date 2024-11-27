@@ -5,7 +5,7 @@
 #ifndef NIJIEMU_METALRENDERER_H
 #define NIJIEMU_METALRENDERER_H
 
-#include "../IRenderer.h"
+#include "../interfaces/IRenderer.h"
 
 class MetalRenderer : public IRenderer
 {
