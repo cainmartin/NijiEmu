@@ -7,7 +7,7 @@
 
 void Renderer::Initialize(std::unique_ptr<IPlatform>& platform)
 {
-    m_renderer = CreateRenderer();
+    m_renderer = RENDERER::CreateRenderer();
     m_renderer->Initialize(platform);
 }
 

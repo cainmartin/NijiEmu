@@ -37,6 +37,7 @@ list(APPEND COMMON_SOURCES
     src/Application.cpp
     src/platform/PlatformFactory.cpp
     src/renderer/Renderer.cpp
+    src/renderer/RendererFactory.cpp
 )
 
 add_executable(NijiEmu

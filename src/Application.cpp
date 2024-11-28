@@ -10,11 +10,11 @@
 bool Application::Initialize()
 {
     m_platform = PLATFORM::CreatePlatform();
+    m_renderer = std::make_unique<Renderer>();
 
     try
     {
         m_platform->Initialize();
-        m_renderer = std::make_unique<Renderer>();
         m_renderer->Initialize(m_platform);
     }
     catch (const std::exception &ex)
