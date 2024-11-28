@@ -12,7 +12,7 @@
 class Application
 {
 public:
-    [[nodiscard]] bool Initialize();
+    void Initialize();
     void Run();
 
 private:

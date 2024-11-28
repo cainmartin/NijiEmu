@@ -3,11 +3,12 @@
 //
 
 #include <iostream>
+#include <stdexcept>
 #include "Application.h"
 #include "platform/PlatformFactory.h"
 #include "renderer/Renderer.h"
 
-bool Application::Initialize()
+void Application::Initialize()
 {
     m_platform = PLATFORM::CreatePlatform();
     m_renderer = std::make_unique<Renderer>();
@@ -19,11 +20,8 @@ bool Application::Initialize()
     }
     catch (const std::exception &ex)
     {
-        std::cout << "ERROR: Unable to initialize the platform\n";
-        return false;
+        throw std::runtime_error("Unable to initialize the platform");
     }
-
-    return true;
 }
 
 void Application::Run()

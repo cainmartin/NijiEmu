@@ -11,7 +11,6 @@
 class Renderer
 {
 public:
-
     void Initialize(std::unique_ptr<IPlatform>& platform);
     void Draw();
 

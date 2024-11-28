@@ -6,10 +6,18 @@ int main()
     std::cout << "Initializing Niji Emu - The ZX Spectrum emulator" << std::endl;
 
     Application app;
-    if (app.Initialize())
+
+    try
     {
-        app.Run();
+        app.Initialize();
+    }
+    catch(const std::runtime_error& ex)
+    {
+        std::cerr << ex.what() << std::endl;
+        return EXIT_FAILURE;
     }
 
-    return 0;
+    app.Run();
+
+    return EXIT_SUCCESS;
 }
