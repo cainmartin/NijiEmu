@@ -35,6 +35,7 @@ endif()
 list(APPEND COMMON_SOURCES
     main.cpp
     src/Application.cpp
+    src/platform/PlatformFactory.cpp
     src/renderer/Renderer.cpp
 )
 

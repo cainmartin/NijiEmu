@@ -7,6 +7,7 @@
 
 #include <memory>
 #include "platform/interfaces/IPlatform.h"
+#include "renderer/Renderer.h"
 
 class Application
 {
@@ -16,6 +17,7 @@ public:
 
 private:
     std::unique_ptr<IPlatform> m_platform;
+    std::unique_ptr<Renderer> m_renderer;
 };
 
 

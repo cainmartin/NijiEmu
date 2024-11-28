@@ -128,7 +128,7 @@ LRESULT Platform_Win32::WndProc(HWND hwnd, UINT message, WPARAM wparam, LPARAM l
 
 void* Platform_Win32::GetNativeLayer()
 {
-    return nullptr;
+    return static_cast<void*>(m_hwnd);
 }
 
 #endif // _WIN32

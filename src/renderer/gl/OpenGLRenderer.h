@@ -5,7 +5,13 @@
 #ifndef NIJIEMU_OPENGLRENDERER_H
 #define NIJIEMU_OPENGLRENDERER_H
 
+
 #include "../interfaces/IRenderer.h"
+#include "../../platform/interfaces/IPlatform.h"
+
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <memory>
 
 class OpenGLRenderer : public IRenderer
 {
@@ -13,10 +19,14 @@ public:
     OpenGLRenderer();
     ~OpenGLRenderer() override;
 
-    void Init() override;
+    void Initialize(std::unique_ptr<IPlatform>& platform) override;
     void Draw() override;
-private:
 
+private:
+    HDC m_hdc;
+    HWND m_hwnd;
+    HGLRC m_hglrc;
+    bool m_initialized;
 };
 
 

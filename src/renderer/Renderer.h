@@ -5,10 +5,18 @@
 #ifndef NIJIEMU_RENDERER_H
 #define NIJIEMU_RENDERER_H
 
+#include "interfaces/IRenderer.h"
+#include <memory>
 
 class Renderer
 {
+public:
 
+    void Initialize(std::unique_ptr<IPlatform>& platform);
+    void Draw();
+
+private:
+    std::unique_ptr<IRenderer> m_renderer;
 };
 
 

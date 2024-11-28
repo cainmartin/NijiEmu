@@ -9,7 +9,7 @@
 #include "gl/OpenGLRenderer.h"
 #include "metal/MetalRenderer.h"
 
-std::unique_ptr<IRenderer> RendererFactory()
+std::unique_ptr<IRenderer> CreateRenderer()
 {
 #ifdef _WIN32
     return std::unique_ptr<IRenderer>(new OpenGLRenderer());

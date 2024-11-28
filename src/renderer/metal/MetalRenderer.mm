@@ -17,7 +17,7 @@ MetalRenderer::~MetalRenderer()
 
 }
 
-void MetalRenderer::Init()
+void MetalRenderer::Initialize(std::unique_ptr<IPlatform>& platform)
 {
 
 }

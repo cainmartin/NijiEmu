@@ -5,7 +5,9 @@
 #ifndef NIJIEMU_METALRENDERER_H
 #define NIJIEMU_METALRENDERER_H
 
+#include "../../platform/interfaces/IPlatform.h"
 #include "../interfaces/IRenderer.h"
+#include <memory>
 
 class MetalRenderer : public IRenderer
 {
@@ -13,7 +15,7 @@ public:
     MetalRenderer();
     ~MetalRenderer() override;
 
-    void Init() override;
+    void Initialize(std::unique_ptr<IPlatform>& platform) override;
     void Draw() override;
 
 private:
