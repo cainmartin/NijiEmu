@@ -7,12 +7,20 @@
 
 #include "../../platform/interfaces/IPlatform.h"
 #include <memory>
+#include "../../core/Color.h"
 
-class IRenderer
+namespace Renderer
 {
-public:
-    virtual ~IRenderer() = default;
-    virtual void Initialize(std::unique_ptr<IPlatform>& platform) = 0;
-    virtual void Draw() = 0;
-};
+    class IRenderer
+    {
+    public:
+        virtual ~IRenderer() = default;
+
+        virtual void Initialize(std::unique_ptr<IPlatform> &platform) = 0;
+        virtual void BeginDraw() = 0;
+        virtual void Draw() = 0;
+        virtual void DrawPixel(int x, int y, const Core::Color& color) = 0;
+        virtual void EndDraw() = 0;
+    };
+}
 #endif //NIJIEMU_IRENDERER_H

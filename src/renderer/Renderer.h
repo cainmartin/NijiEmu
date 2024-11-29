@@ -8,15 +8,19 @@
 #include "interfaces/IRenderer.h"
 #include <memory>
 
-class Renderer
+namespace Renderer
 {
-public:
-    void Initialize(std::unique_ptr<IPlatform>& platform);
-    void Draw();
+    class Renderer
+    {
+    public:
+        void Initialize(std::unique_ptr<IPlatform> &platform);
 
-private:
-    std::unique_ptr<IRenderer> m_renderer;
-};
+        void Draw();
 
+    private:
+        std::unique_ptr<IRenderer> m_renderer;
+    };
+
+}
 
 #endif //NIJIEMU_RENDERER_H

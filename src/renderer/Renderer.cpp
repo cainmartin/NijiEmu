@@ -5,13 +5,16 @@
 #include "Renderer.h"
 #include "RendererFactory.h"
 
-void Renderer::Initialize(std::unique_ptr<IPlatform>& platform)
+namespace Renderer
 {
-    m_renderer = RENDERER::CreateRenderer();
-    m_renderer->Initialize(platform);
-}
+    void Renderer::Initialize(std::unique_ptr<IPlatform>& platform)
+    {
+        m_renderer = CreateRenderer();
+        m_renderer->Initialize(platform);
+    }
 
-void Renderer::Draw()
-{
-    m_renderer->Draw();
+    void Renderer::Draw()
+    {
+        m_renderer->Draw();
+    }
 }

@@ -9,7 +9,7 @@
 #include "metal/MetalRenderer.h"
 #endif
 
-namespace RENDERER
+namespace Renderer
 {
     std::unique_ptr<IRenderer> CreateRenderer()
     {

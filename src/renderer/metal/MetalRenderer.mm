@@ -7,22 +7,41 @@
 #include "MetalRenderer.h"
 #include <Metal/Metal.h>
 
-MetalRenderer::MetalRenderer()
+namespace Renderer
 {
 
-}
+    MetalRenderer::MetalRenderer()
+    {
 
-MetalRenderer::~MetalRenderer()
-{
+    }
 
-}
+    MetalRenderer::~MetalRenderer()
+    {
 
-void MetalRenderer::Initialize(std::unique_ptr<IPlatform>& platform)
-{
+    }
 
-}
+    void MetalRenderer::Initialize(std::unique_ptr <IPlatform> &platform)
+    {
 
-void MetalRenderer::Draw()
-{
+    }
 
+    void MetalRenderer::BeginDraw()
+    {
+
+    }
+
+    void MetalRenderer::Draw()
+    {
+
+    }
+
+    void MetalRenderer::DrawPixel(int x, int y, const Core::Color& color)
+    {
+
+    }
+
+    void MetalRenderer::EndDraw()
+    {
+
+    }
 }

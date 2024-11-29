@@ -10,7 +10,7 @@
 #include "mac/Platform_MacOSX.h"
 #endif
 
-namespace PLATFORM
+namespace Platform
 {
     std::unique_ptr<IPlatform> CreatePlatform()
     {

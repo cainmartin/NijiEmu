@@ -5,7 +5,7 @@
 #ifndef NIJIEMU_RENDERERFACTORY_H
 #define NIJIEMU_RENDERERFACTORY_H
 
-namespace RENDERER
+namespace Renderer
 {
     std::unique_ptr<IRenderer> CreateRenderer();
 }

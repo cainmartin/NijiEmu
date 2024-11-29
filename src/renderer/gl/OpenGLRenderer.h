@@ -13,21 +13,27 @@
 #include <windows.h>
 #include <memory>
 
-class OpenGLRenderer : public IRenderer
+namespace Renderer
 {
-public:
-    OpenGLRenderer();
-    ~OpenGLRenderer() override;
+    class OpenGLRenderer : public IRenderer
+    {
+    public:
+        OpenGLRenderer();
 
-    void Initialize(std::unique_ptr<IPlatform>& platform) override;
-    void Draw() override;
+        ~OpenGLRenderer() override;
 
-private:
-    HDC m_hdc;
-    HWND m_hwnd;
-    HGLRC m_hglrc;
-    bool m_initialized;
-};
+        void Initialize(std::unique_ptr<IPlatform> &platform) override;
+        void BeginDraw() override;
+        void Draw() override;
+        void DrawPixel(int x, int y, const Core::Color& color) override;
+        void EndDraw() override;
 
+    private:
+        HDC m_hdc;
+        HWND m_hwnd;
+        HGLRC m_hglrc;
+        bool m_initialized;
+    };
+}
 
 #endif //NIJIEMU_OPENGLRENDERER_H

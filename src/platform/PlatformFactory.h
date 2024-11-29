@@ -8,7 +8,7 @@
 #include "interfaces/IPlatform.h"
 #include <memory>
 
-namespace PLATFORM
+namespace Platform
 {
     std::unique_ptr<IPlatform> CreatePlatform();
 }

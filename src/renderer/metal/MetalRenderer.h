@@ -8,19 +8,26 @@
 #include "../../platform/interfaces/IPlatform.h"
 #include "../interfaces/IRenderer.h"
 #include <memory>
+#include "../../core/Color.h"
 
-class MetalRenderer : public IRenderer
+namespace Renderer
 {
-public:
-    MetalRenderer();
-    ~MetalRenderer() override;
+    class MetalRenderer : public Renderer::IRenderer
+    {
+    public:
+        MetalRenderer();
 
-    void Initialize(std::unique_ptr<IPlatform>& platform) override;
-    void Draw() override;
+        ~MetalRenderer() override;
 
-private:
+        void Initialize(std::unique_ptr<IPlatform> &platform) override;
+        void BeginDraw() override;
+        void Draw() override;
+        void DrawPixel(int x, int y, const Core::Color& color) override;
+        void EndDraw() override;
 
-};
+    private:
 
+    };
 
+}
 #endif //NIJIEMU_METALRENDERER_H
