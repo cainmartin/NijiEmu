@@ -79,7 +79,13 @@ namespace Core::FileLoader
         {
             throw std::runtime_error("Could not open file " + fullPath.string() + " for writing.");
         }
-        file.write(reinterpret_cast<const char *>(content.data()), static_cast<std::streamsize>(content.size()));
+        size_t contentSize = content.size();
+        if (contentSize > static_cast<size_t>(std::numeric_limits<std::streamsize>::max()))
+        {
+            throw std::runtime_error("Content size exceeds maximum stream size");
+        }
+
+        file.write(reinterpret_cast<const char *>(content.data()), static_cast<std::streamsize>(contentSize));
         if (!file)
         {
             throw std::runtime_error("Error writing to file " + fullPath.string());

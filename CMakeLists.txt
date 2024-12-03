@@ -35,10 +35,11 @@ endif()
 list(APPEND COMMON_SOURCES
     main.cpp
     src/Application.cpp
+    src/core/ResourceManager.cpp
     src/platform/PlatformFactory.cpp
     src/renderer/Renderer.cpp
     src/renderer/RendererFactory.cpp
-    src/core/ResourceManager.cpp
+    src/renderer/Shader.cpp
 )
 
 add_executable(NijiEmu

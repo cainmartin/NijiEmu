@@ -129,15 +129,13 @@ namespace Renderer
 
     void OpenGLRenderer::BeginDraw()
     {
-
+        glClearColor(1.0f, 0.0f, 0.0f, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT);
     }
 
     void OpenGLRenderer::Draw()
     {
-        glClearColor(1.0f, 0.0f, 0.0f, 1.0);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        SwapBuffers(m_hdc);
+        // TODO: implement draw for general objects
     }
 
     void OpenGLRenderer::DrawPixel(int x, int y, const Core::Color& color)
@@ -147,6 +145,6 @@ namespace Renderer
 
     void OpenGLRenderer::EndDraw()
     {
-
+        SwapBuffers(m_hdc);
     }
 }
